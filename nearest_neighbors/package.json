@@ -28,6 +28,6 @@
     "test": ""
   },
   "dependencies": {
-    "@huggingface/transformers": "^3.6.3"
+    "@huggingface/transformers": "^3.6.0"
   }
 }
