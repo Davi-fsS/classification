@@ -2,3 +2,4 @@ node_modules
 *.jpg
 nearest_neighbors/embeddings.json
 nearest_neighbors/embeddings
+.env
