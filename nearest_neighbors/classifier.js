@@ -75,4 +75,29 @@ function knnClassifier(test, k){
     return predictedClass
 }
 
-console.log(knnClassifier(tests[0], 5))
+function calculateAccuracy(results){
+    let correct = 0;
+
+    for(let result of results){
+        if(result["predictedClass"] == result["trueClass"]){
+            correct++
+        }
+    }
+
+    return correct / results.length
+}
+
+let predictedClasses = []
+
+for(let test of tests){
+    const predicted = knnClassifier(test, 5);
+
+    predictedClasses.push({
+        predictedClass: predicted,
+        trueClass: test["class"]
+    })
+}
+
+console.log(predictedClasses)
+
+console.log(calculateAccuracy(predictedClasses))
